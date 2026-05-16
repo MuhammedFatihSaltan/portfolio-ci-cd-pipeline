@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="tr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammed Fatih Saltan | Junior DevOps Engineer</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- FontAwesome İkonları -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Özel CSS Bağlantısı -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-[#0a0f1d] text-gray-100 font-sans overflow-x-hidden">
+
+    <!-- 3D Arka Plan Parçacıkları -->
+    <div class="stars"></div>
+    <div class="glowing-orb orb-1"></div>
+    <div class="glowing-orb orb-2"></div>
+
+    <!-- NAVBAR -->
+    <nav class="fixed top-0 left-0 w-full z-50 bg-[#0a0f1da0] backdrop-blur-md border-b border-gray-800/50 px-6 py-4 flex justify-between items-center">
+        <a href="#" class="text-xl font-bold tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">
+            <i class="fa-solid fa-terminal mr-2"></i>fatih.devops
+        </a>
+        <div class="hidden md:flex space-x-8 text-sm font-medium">
+            <a href="#hero" class="hover:text-cyan-400 transition-colors">Ana Sayfa</a>
+            <a href="#skills" class="hover:text-cyan-400 transition-colors">Yetenekler</a>
+            <a href="#devops-zone" class="hover:text-cyan-400 transition-colors">DevOps & AWS</a>
+            <a href="#projects" class="hover:text-cyan-400 transition-colors">Projeler</a>
+            <a href="#contact" class="hover:text-cyan-400 transition-colors">İletişim</a>
+        </div>
+        <a href="#projects" class="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white px-5 py-2 rounded-lg text-sm font-semibold transition-all shadow-lg shadow-cyan-500/20 standard-3d-button">
+            Pipeline'ı Gör
+        </a>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section id="hero" class="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-20 relative">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(6,182,212,0.08)_0%,transparent_70%)]"></div>
+        
+        <div class="z-10 transform-3d animate-float">
+            <span class="bg-cyan-500/10 text-cyan-400 text-xs px-4 py-1.5 rounded-full border border-cyan-500/30 font-mono tracking-widest uppercase">
+                Ready to Automate
+            </span>
+            <h1 class="text-5xl md:text-7xl font-extrabold mt-6 tracking-tight">
+                Muhammed Fatih Saltan
+            </h1>
+            <p class="text-xl md:text-2xl font-mono text-gray-400 mt-4 h-8" id="typewriter"></p>
+            
+            <p class="max-w-2xl text-gray-400 mt-6 text-base md:text-lg balance">
+                Altyapıyı kod olarak tasarlıyor (IaC), manuel süreçleri otomatize ediyor ve uygulamaları bulut ekosisteminde (AWS) ölçeklenebilir, hatasız ve sürekli (CI/CD) hale getiriyorum.
+            </p>
+
+            <div class="mt-10 flex flex-wrap justify-center gap-4">
+                <a href="#projects" class="hero-btn-primary">
+                    Projelerimi İncele
+                </a>
+                <a href="#devops-zone" class="hero-btn-secondary">
+                    AWS & DevOps Kültürü
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section id="skills" class="py-24 px-6 max-w-6xl mx-auto">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold">Teknoloji & Araç Setim</h2>
+            <p class="text-gray-400 mt-2 font-mono">Bildiğim ve Aktif Kullandığım DevOps Teknolojileri</p>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <!-- AWS Card -->
+            <div class="skill-card bg-gray-900/40 border border-gray-800 p-6 rounded-2xl text-center group hover:border-orange-500/50 transition-all duration-300">
+                <i class="fa-brands fa-aws text-4xl text-orange-400 group-hover:scale-110 transition-transform"></i>
+                <h3 class="font-bold mt-4">AWS</h3>
+                <p class="text-xs text-gray-500 mt-1 font-mono">EC2, S3, CloudFront</p>
+            </div>
+            <!-- Docker Card -->
+            <div class="skill-card bg-gray-900/40 border border-gray-800 p-6 rounded-2xl text-center group hover:border-blue-500/50 transition-all duration-300">
+                <i class="fa-brands fa-docker text-4xl text-blue-400 group-hover:scale-110 transition-transform"></i>
+                <h3 class="font-bold mt-4">Docker</h3>
+                <p class="text-xs text-gray-500 mt-1 font-mono">Konteynerleştirme</p>
+            </div>
+            <!-- GitHub Actions -->
+            <div class="skill-card bg-gray-900/40 border border-gray-800 p-6 rounded-2xl text-center group hover:border-purple-500/50 transition-all duration-300">
+                <i class="fa-brands fa-github text-4xl text-purple-400 group-hover:scale-110 transition-transform"></i>
+                <h3 class="font-bold mt-4">GitHub Actions</h3>
+                <p class="text-xs text-gray-500 mt-1 font-mono">CI / CD Pipelines</p>
+            </div>
+            <!-- Linux / Bash -->
+            <div class="skill-card bg-gray-900/40 border border-gray-800 p-6 rounded-2xl text-center group hover:border-yellow-500/50 transition-all duration-300">
+                <i class="fa-brands fa-linux text-4xl text-yellow-400 group-hover:scale-110 transition-transform"></i>
+                <h3 class="font-bold mt-4">Linux & Bash</h3>
+                <p class="text-xs text-gray-500 mt-1 font-mono">Scripting / Otomasyon</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- DEVOPS & AWS BİLGİLENDİRME ALANI (DEVOPS ZONE) -->
+    <section id="devops-zone" class="py-24 px-6 bg-gradient-to-b from-transparent via-cyan-950/10 to-transparent relative">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">DevOps & AWS Nedir?</h2>
+                <p class="text-gray-400 mt-2">Mülakatlara ve Sektöre Yönelik Temel Bilgi Kartları</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Kart 1: CI/CD -->
+                <div class="info-card-3d bg-[#0f172a]/80 border border-gray-800 p-8 rounded-2xl relative overflow-hidden group">
+                    <div class="absolute top-0 left-0 w-2 h-full bg-cyan-500"></div>
+                    <div class="text-cyan-400 font-mono text-sm mb-2">// CONTINUOUS INTEGRATION & DEPLOYMENT</div>
+                    <h3 class="text-xl font-bold mb-4">CI / CD Nedir?</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        <strong class="text-gray-200">CI (Sürekli Entegrasyon):</strong> Geliştiricilerin kodlarını ana depoya her push ettiğinde otomatik olarak test edilmesi ve derlenmesidir.<br><br>
+                        <strong class="text-gray-200">CD (Sürekli Dağıtım):</strong> Testlerden başarıyla geçen kodun, insan müdahalesi olmadan otomatik olarak canlı sunuculara (Örn: AWS S3) aktarılması sürecidir. Hata riskini sıfıra indirir.
+                    </p>
+                </div>
+
+                <!-- Kart 2: IaC -->
+                <div class="info-card-3d bg-[#0f172a]/80 border border-gray-800 p-8 rounded-2xl relative overflow-hidden group">
+                    <div class="absolute top-0 left-0 w-2 h-full bg-blue-500"></div>
+                    <div class="text-blue-400 font-mono text-sm mb-2">// INFRASTRUCTURE AS CODE</div>
+                    <h3 class="text-xl font-bold mb-4">IaC Nedir?</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Sunucuları, ağları ve veri tabanlarını AWS paneline girip elle (manuel) tıklayarak oluşturmak yerine, **kod yazarak (Terraform, CloudFormation vb.)** otomatik olarak ayağa kaldırma felsefesidir.<br><br>
+                        Bu sayede altyapı dokümante edilmiş olur, versiyonlanabilir ve tek bir komutla dünyanın başka bir yerindeki veri merkezinde birebir kopyası kurulabilir.
+                    </p>
+                </div>
+
+                <!-- Kart 3: AWS Ecosystem -->
+                <div class="info-card-3d bg-[#0f172a]/80 border border-gray-800 p-8 rounded-2xl relative overflow-hidden group">
+                    <div class="absolute top-0 left-0 w-2 h-full bg-orange-500"></div>
+                    <div class="text-orange-400 font-mono text-sm mb-2">// CLOUD COMPUTING / AWS</div>
+                    <h3 class="text-xl font-bold mb-4">Neden AWS Cloud?</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        AWS, dünyanın en büyük ve güvenilir bulut sağlayıcısıdır. Şirketlere fiziksel sunucu maliyetinden kurtulma imkanı sunar.<br><br>
+                        <strong class="text-orange-300">S3:</strong> Sınırsız dosya depolama alanı sunar, statik web siteleri için mükemmel bir hosting alanıdır.<br>
+                        <strong class="text-orange-300">CloudFront:</strong> İçerikleri dünya genelinde önbelleğe alarak (CDN) web sitelerinin milisaniyeler içinde açılmasını sağlar.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects" class="py-24 px-6 max-w-6xl mx-auto">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold">Öne Çıkan DevOps Projelerim</h2>
+            <p class="text-gray-400 mt-2 font-mono">Canlıda Çalışan Altyapı Çözümleri</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+            <!-- Proje 1 (Mevcut Başyapıt) -->
+            <div class="project-card bg-gradient-to-br from-gray-900 to-slate-950 border border-cyan-500/30 p-8 rounded-2xl relative shadow-2xl group hover:shadow-cyan-500/10 transition-all duration-500">
+                <div class="absolute -top-3 -right-3 bg-cyan-500 text-slate-950 text-xs font-mono font-bold px-3 py-1 rounded-md uppercase tracking-wider">
+                    Bu Site Canlıda!
+                </div>
+                <h3 class="text-2xl font-bold text-white group-hover:text-cyan-400 transition-colors">GitHub Actions ile Otomatik Statik Site Deploy Pipeline'ı</h3>
+                <p class="text-gray-400 text-sm mt-4 leading-relaxed">
+                    Şu an incelemekte olduğunuz portfolyo sitesinin altyapısıdır. Kod tabanında yapılan her değişiklik, GitHub Actions CI/CD hattı üzerinden otomatik olarak test edilir, AWS S3 mimarisine dağıtılır ve CloudFront CDN önbelleği temizlenerek anında küresel erişime sunulur.
+                </p>
+                <div class="flex flex-wrap gap-2 mt-6">
+                    <span class="bg-gray-800 text-gray-300 text-xs px-3 py-1 rounded-md font-mono">GitHub Actions</span>
+                    <span class="bg-gray-800 text-gray-300 text-xs px-3 py-1 rounded-md font-mono">AWS S3</span>
+                    <span class="bg-gray-800 text-gray-300 text-xs px-3 py-1 rounded-md font-mono">CloudFront</span>
+                    <span class="bg-gray-800 text-gray-300 text-xs px-3 py-1 rounded-md font-mono">CI/CD</span>
+                </div>
+                <div class="mt-8 pt-6 border-t border-gray-800/80 flex justify-between items-center">
+                    <a href="#" class="text-cyan-400 hover:text-cyan-300 text-sm font-semibold flex items-center gap-2">
+                        <i class="fa-brands fa-github text-lg"></i> Kodu İncele
+                    </a>
+                </div>
+            </div>
+
+            <!-- Proje 2 (Gelecek Vizyon / Yedekleme Projen vb.) -->
+            <div class="project-card bg-gradient-to-br from-gray-900 to-slate-950 border border-gray-800 p-8 rounded-2xl shadow-2xl group hover:border-gray-700 transition-all duration-500">
+                <h3 class="text-2xl font-bold text-white group-hover:text-blue-400 transition-colors">AWS EC2 Otomatik Veri Yedekleme Sistemi</h3>
+                <p class="text-gray-400 text-sm mt-4 leading-relaxed">
+                    Linux sunucuların (EC2) güvenliği için geliştirilmiş otomasyon projesi. Yazılan Bash betiği (script) ve tanımlanan Cron Job sayesinde sunucu üzerindeki kritik log ve veri tabanı yedekleri sıkıştırılarak şifreli bir şekilde güvenli AWS S3 bucket'larına günlük olarak yedeklenir.
+                </p>
+                <div class="flex flex-wrap gap-2 mt-6">
+                    <span class="bg-gray-800 text-gray-300 text-xs px-3 py-1 rounded-md font-mono">Bash Script</span>
+                    <span class="bg-gray-800 text-gray-300 text-xs px-3 py-1 rounded-md font-mono">AWS EC2</span>
+                    <span class="bg-gray-800 text-gray-300 text-xs px-3 py-1 rounded-md font-mono">Cron Job</span>
+                    <span class="bg-gray-800 text-gray-300 text-xs px-3 py-1 rounded-md font-mono">Automation</span>
+                </div>
+                <div class="mt-8 pt-6 border-t border-gray-800/80 flex justify-between items-center">
+                    <a href="#" class="text-gray-400 hover:text-white text-sm font-semibold flex items-center gap-2">
+                        <i class="fa-brands fa-github text-lg"></i> Kodu İncele
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="py-24 px-6 relative overflow-hidden">
+        <div class="max-w-[700px] mx-auto glass-card p-10 text-center relative z-10">
+            <h2 class="text-3xl md:text-4xl font-bold text-[#eef5ff] mb-4">
+                <i class="fa-solid fa-envelope-open-text mr-3 text-[#0ff]"></i>Birlikte çalışalım!
+            </h2>
+            <p class="text-[#eef5ff] opacity-80 mb-10 text-lg">
+                Staj fırsatları, iş birliği veya DevOps hakkında sohbet etmek için iletişime geçin.
+            </p>
+            
+            <div class="flex flex-wrap justify-center gap-6 mb-12">
+                <a href="#" id="email-btn" class="btn-neon">
+                    <i class="fa-solid fa-envelope mr-2"></i> E-posta Gönder
+                </a>
+                <a href="#" id="linkedin-btn" class="btn-neon">
+                    <i class="fa-brands fa-linkedin mr-2"></i> LinkedIn
+                </a>
+                <a href="#" id="github-btn" class="btn-neon">
+                    <i class="fa-brands fa-github mr-2"></i> GitHub
+                </a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-[#eef5ff] text-left mb-10">
+                <div class="flex items-center gap-3 bg-white/5 p-4 rounded-xl border border-white/10">
+                    <i class="fa-solid fa-map-marker-alt text-[#0ff] text-xl"></i>
+                    <div class="text-xs">
+                        <p class="opacity-50 uppercase font-bold">Lokasyon</p>
+                        <p class="text-sm">İstanbul, Türkiye</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3 bg-white/5 p-4 rounded-xl border border-white/10">
+                    <i class="fa-solid fa-clock text-[#0ff] text-xl"></i>
+                    <div class="text-xs">
+                        <p class="opacity-50 uppercase font-bold">Durum</p>
+                        <p class="text-sm">Açık çalışmaya hazır</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3 bg-white/5 p-4 rounded-xl border border-white/10">
+                    <i class="fa-solid fa-code text-[#0ff] text-xl"></i>
+                    <div class="text-xs">
+                        <p class="opacity-50 uppercase font-bold">Unvan</p>
+                        <p class="text-sm">Junior DevOps Mühendisi</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-8 pt-8 border-t border-cyan-500/20 text-[#eef5ff]">
+                <p class="flex items-center justify-center gap-3 text-lg font-medium">
+                    <i class="fa-solid fa-paper-plane text-[#0ff] animate-pulse"></i>
+                    CV'mi veya portfolyo detaylarımı istemek için bana ulaşın!
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-12 border-t border-gray-900 bg-[#060a13] text-center text-gray-500 text-sm">
+        <p>© 2026 Muhammed Fatih Saltan. All rights reserved.</p>
+        <p class="mt-2 font-mono text-xs text-cyan-500/60">Built with Tailwind & Automated via GitHub Actions</p>
+    </footer>
+
+    <!-- Özel JS Bağlantısı -->
+    <script src="portfoilo.js"></script>
+</body>
+</html>
