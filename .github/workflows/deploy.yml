@@ -1,0 +1,28 @@
+name: Deploy Portfolio to AWS S3
+
+on:
+  push:
+    branches:
+      - portfolio  # Sadece portfolio branch'ine push yapıldığında tetiklenir
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    # 1. Adım: GitHub deponuzdaki kodları workflow alanına çekiyoruz
+    - name: Checkout Code
+      uses: actions/checkout@v4
+
+    # 2. Adım: AWS CLI kimlik doğrulaması yapıyoruz
+    - name: Configure AWS Credentials
+      uses: aws-actions/configure-aws-credentials@v4
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: eu-central-1  # S3 bucket'ını açtığın Frankfurt bölgesi
+
+    # 3. Adım: Dosyaları AWS S3'e senkronize ediyoruz
+    - name: Deploy to S3 Bucket
+      run: |
+        aws s3 sync . s3://${{ secrets.AWS_S3_BUCKET_NAME }} --delete --exclude ".git/*" --exclude ".github/*"
